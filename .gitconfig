@@ -1,0 +1,8 @@
+[user]
+	username = saivigneshabishek
+	name = Sai Vignesh Abishek
+	email = saivigneshabishek@gmail.com
+[init]
+	defaultBranch = main
+[status]
+	short = false

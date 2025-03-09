@@ -1,2 +1,9 @@
 alias vim=nvim
 alias dots='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias tmuxa='tmux attach'
+
+alias fs='file=$(fzf) && [ -n "$file" ] && vim "$file"'
+
+alias ..="cd .."
+alias ...="cd ../.."
+

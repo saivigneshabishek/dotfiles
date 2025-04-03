@@ -12,7 +12,7 @@ compinit -d $HOME/.cache/zsh/zcompdump-$ZSH_VERSION
 HISTFILE="${XDG_CACHE_HOME:-$HOME/.cache}/zsh/history"
 
 autoload -U colors && colors
-PS1="%B[%n@%{$fg[magenta]%}%M %{$reset_color%}%~%B]$%b "
+PS1="%B[%n@%{$fg[magenta]%}%M %{$reset_color%}%~%B]%b$ "
 
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'

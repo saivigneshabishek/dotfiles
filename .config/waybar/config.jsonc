@@ -20,7 +20,16 @@
         "network",
         "battery"
     ],
- 
+
+    "hyprland/workspaces": {
+	// Starts with 2 open workspaces each
+	"persistent-workspaces":
+	    {
+		"HDMI-A-1": [1,2],
+		"eDP-1": [6,7]
+	    }
+    },
+
     "tray": {
         // "icon-size": 21,
         "spacing": 10

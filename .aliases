@@ -1,4 +1,6 @@
 alias vim=nvim
+alias svim="sudo -E nvim"
+
 alias dots='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias tmuxa='tmux attach'
 

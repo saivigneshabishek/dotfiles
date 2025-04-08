@@ -6,3 +6,5 @@
 	defaultBranch = main
 [status]
 	short = false
+[core]
+	pager = cat

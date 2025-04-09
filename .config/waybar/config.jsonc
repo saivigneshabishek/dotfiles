@@ -42,11 +42,13 @@
     },
 
     "cpu": {
+	"interval": 1,
         "format": "CPU: {usage}%",
         "tooltip": false
     },
 
     "memory": {
+	"interval": 1,
         "format": "RAM: {}% "
     },
 

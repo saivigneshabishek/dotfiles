@@ -1,7 +1,7 @@
 // -*- mode: jsonc -*-
 {
-//    "layer": "top", // Waybar at top layer
-//   "position": "top", // Waybar position (top|bottom|left|right)
+    //    "layer": "top", // Waybar at top layer
+    //   "position": "top", // Waybar position (top|bottom|left|right)
     "height": 25, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
@@ -13,21 +13,21 @@
         "clock"
     ],
     "modules-right": [
-	"tray",
-	"cpu",
-	"memory",
+        "tray",
+        "cpu",
+        "memory",
         "pulseaudio",
         "network",
         "battery"
     ],
 
     "hyprland/workspaces": {
-	// Starts with 2 open workspaces each
-	"persistent-workspaces":
-	    {
-		"HDMI-A-1": [1,2],
-		"eDP-1": [6,7]
-	    }
+        // Starts with 2 open workspaces each
+        "persistent-workspaces":
+        {
+            "HDMI-A-1": [1,2],
+            "eDP-1": [6,7]
+        }
     },
 
     "tray": {
@@ -36,19 +36,29 @@
     },
 
     "clock": {
-    	// "timezone": "",
-    	"format": "{:%a %d %b - %H:%M}",
-    	"tooltip": false
+        // "timezone": "",
+        "format": "{:%a %d %b - %H:%M}",
+        "tooltip": true,
+        "tooltip-format": "<tt><small>{calendar}</small></tt>",
+        "calendar": {
+            "mode"          : "month",
+            "on-scroll"     : 1,
+            "format": {
+                "months":     "<span color='#cba6f7'><b>{}</b></span>",
+                "days":       "<span color='#ffffff'><b>{}</b></span>",
+                "today":      "<span color='#cba6f7'><b>{}</b></span>"
+            }
+        },
     },
 
     "cpu": {
-	"interval": 1,
+        "interval": 1,
         "format": "CPU: {usage}%",
         "tooltip": false
     },
 
     "memory": {
-	"interval": 1,
+        "interval": 1,
         "format": "RAM: {}% "
     },
 
@@ -65,16 +75,16 @@
     "network": {
         "format-wifi": "{icon}",
         "format-ethernet": "󰤨",
-	"format-icons": ["󰤟","󰤢","󰤥","󰤨"],
+        "format-icons": ["󰤟","󰤢","󰤥","󰤨"],
         "tooltip-format": "Wired Connection",
-	"tooltip-format-wifi": "Connected to {essid}",
+        "tooltip-format-wifi": "Connected to {essid}",
         "format-disconnected": "󰤮"
     },
 
     "pulseaudio": {
         "format": "",
         "format-muted": "",
-	"tooltip-format": "{volume}% Volume",
+        "tooltip-format": "{volume}% Volume",
         "on-click": "pavucontrol"
     }
 }

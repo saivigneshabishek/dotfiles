@@ -9,8 +9,6 @@ vim.opt.expandtab = true
 vim.opt.smartindent = true
 vim.g.mapleader = " "
 
---- plugins ---
-
 -- Bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
@@ -30,23 +28,17 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
 
-    {
-        "catppuccin/nvim",
+    { 
+        'olivercederborg/poimandres.nvim',
         priority = 1000,
         config = function()
-            require("catppuccin").setup({
-                flavour = "mocha",
-                integrations = {
-                    treesitter = true,
-                },
-            })
-            vim.cmd([[colorscheme catppuccin]])
+            vim.cmd([[colorscheme poimandres]])
             vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
             vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })
             vim.api.nvim_set_hl(0, "LineNr", { fg = "#fddcf7" })
             vim.api.nvim_set_hl(0, "Comment", { fg = "#9d9d9d" })
+            vim.api.nvim_set_hl(0, "TelescopeBorder", {fg="#ecc2f0"})
         end,
-
     },
 
     {

@@ -21,3 +21,6 @@ if [ -f ~/.aliases ]; then
     . ~/.aliases
 fi
 
+if [ -f ~/.work_aliases ]; then
+    . ~/.work_aliases
+fi

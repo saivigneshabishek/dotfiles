@@ -234,7 +234,12 @@ window-rule {
 window-rule {
     match app-id="firefox"
     match app-id="zen"
+    match app-id="dev.zed.Zed"
     open-maximized true
+
+    focus-ring {
+        off
+    }
 }
 
 binds {
